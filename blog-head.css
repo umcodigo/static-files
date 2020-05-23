@@ -1,0 +1,80 @@
+/* Customize post header padding */
+.post-header {
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+}
+
+.has-cover .post-title {
+    text-shadow: 3px 3px 4px #000000;
+}
+
+/* Custom code padding */
+pre code,
+pre .lines {
+    padding: 10px !important;
+}
+
+/* Change orange to blue */
+.post-content blockquote { border-left-color: #364F6B; }
+.post-content a { box-shadow: inset 0 -2px 0 #364F6B; }
+.progress-bar,
+.post-tags a,
+.nav-header li.active a:before,
+.post-tags a:focus, 
+.post-tags a:hover { background-color: #364F6B; }
+.post-content ol>li:before, 
+.post-content ul>li:before,
+.post-info .post-type { color: #364F6B }
+.post-content a:focus, 
+.post-content a:hover { box-shadow: inset 0 -3px 0 #252525; }
+
+.nav-footer {
+    background-color: #252525;
+    color: white;
+    margin-top: 30px;
+    padding-top: 40px;
+}
+
+/* [Index] post images */
+#index .post img {
+    width: 40%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+#index .post .post-excerpt {
+    margin: 0;
+    text-align: justify;
+}
+
+/* Image full screen */
+#overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.8) none 50% / contain no-repeat;
+  cursor: pointer;
+  transition: 0.3s;
+
+  visibility: hidden;
+  opacity: 0;
+}
+#overlay.open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99;
+}
+
+#overlay:after { /* X button icon */
+  content: "\2715";
+  position: absolute;
+  color:#fff;
+  top: 10px;
+  right:20px;
+  font-size: 2em;
+}
