@@ -21,4 +21,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SERVER_PASS }}
       run: |
-        sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "sudo -i -u ghost-mgr && cd /home/ghost-mgr/cdn/blog && git pull origin master"
+        sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "sudo -i -u ghost-mgr && cd /home/ghost-mgr/cdn/blog && git pull https://github.com/umcodigo/static-files.git master"
