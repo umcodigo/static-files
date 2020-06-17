@@ -78,3 +78,8 @@ pre .lines {
   right:20px;
   font-size: 2em;
 }
+
+/* github gists */
+.gist {
+  margin-bottom: 10px;
+}

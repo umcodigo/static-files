@@ -17,10 +17,6 @@ $(".post-content img").each(function() {
     }
 });
 
-// disqus coments
-var disqus = 'umcodigo';
-$("#show-disqus").click();
-
 // Send IFTTT notification    
 var url = 'https://maker.ifttt.com/trigger/acesso_um_codigo/with/key/bydgPA8SXGxqraluZW3UyS?value1=' + window.location.pathname;
 var xmlHttp = new XMLHttpRequest();
