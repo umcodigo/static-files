@@ -21,4 +21,4 @@ jobs:
         SSHCMD: sshpass -e ssh -o StrictHostKeyChecking=no 
         CDN_PATH: /home/ghost-mgr/cdn/blog
       run: |
-        ${{ SSHCMD }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}: "sudo -i -u ghost-mgr && cd ${{ CDN_PATH }} && git pull origin master"
+        ${{ env.SSHCMD }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}: "sudo -i -u ghost-mgr && cd ${{ env.CDN_PATH }} && git pull origin master"
