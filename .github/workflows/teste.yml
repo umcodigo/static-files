@@ -18,6 +18,6 @@ jobs:
     - name: SSH no servidor
       env:
         SSHPASS: ${{ secrets.SERVER_PASS }}
-      run: |-
+      run: |
         sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 
         "sudo -i -u ghost-mgr && cd /home/ghost-mgr/cdn/blog && git pull origin master"
